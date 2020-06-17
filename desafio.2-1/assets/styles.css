@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #3498db;
+}
+
+header {
+  padding: 30px;
+  border-bottom: 1px solid #a9d8e4;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header div {
+  text-align: center;
+}
+
+header div a {
+  color: white;
+  margin: 30px;
+  text-decoration: initial;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+header div a:hover {
+  color: #2ecc71;
+}
