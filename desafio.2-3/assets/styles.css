@@ -11,7 +11,7 @@ body {
 header {
   padding: 30px;
   border-bottom: 1px solid #a9d8e4;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .links a {
@@ -54,3 +54,52 @@ header {
 }
 
 /* ========= Estilização da section cards ========  */
+.text {
+  margin: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  margin: 20px 45%;
+  border: 1px solid #7ed6df;
+  border-radius: 50%;
+}
+
+.card_number {
+  padding-top: 5px;
+}
+
+.card_number strong {
+  color: #7ed6df;
+}
+
+.conteudo,
+.button {
+  padding: 24px;
+}
+
+.card_button {
+  margin: 10px;
+  height: 30px;
+}
+
+.button_text {
+  padding: 15px;
+}
