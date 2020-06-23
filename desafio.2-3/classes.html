@@ -9,6 +9,9 @@
     href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico"
     type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
   <title>Desafio 2-3: Página de cursos e iframe</title>
 </head>
 
@@ -35,7 +38,7 @@
           </div>
         </div>
         <div class="imagem">
-          <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="starter">
+          <img src="./assets/imagens/started.svg" alt="starter_01">
         </div>
         <div class="conteudo">
           <p><strong>Torne-se um programador desejado</strong> no mercado com esses cursos gratuitos.</p>
@@ -52,7 +55,7 @@
           </div>
         </div>
         <div class="imagem">
-          <img src="./assets/imagens/0828532024cb46921a6b5e941f8d788d.svg" alt="launchbase">
+          <img src="./assets/imagens/0828532024cb46921a6b5e941f8d788d.svg" alt="launchbase_02">
         </div>
         <div class="conteudo">
           <p><strong>Domine programação do zero</strong> e tenha acesso às melhores oportunidades do mercado.</p>
@@ -69,7 +72,7 @@
           </div>
         </div>
         <div class="imagem">
-          <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="gostack">
+          <img src="./assets/imagens/gostack.svg" alt="gostack_03">
         </div>
         <div class="conteudo">
           <p><strong>Treinamento imersivo</strong> nas tecnologias mais modernas de desenvolvimento web e mobile.</p>
@@ -82,6 +85,18 @@
     </div>
   </section>
 
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+        <i class="material-icons">close</i>
+      </a>
+      <div class="modal-content">
+        <iframe src="https://rocketseat.com.br/starter" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>
