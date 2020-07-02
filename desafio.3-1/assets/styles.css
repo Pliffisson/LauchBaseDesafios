@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #3498db;
+  text-align: center;
+}
+
+header {
+  padding: 30px;
+  border-bottom: 1px solid #a9d8e4;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.links a {
+  color: white;
+  margin: 30px;
+  text-decoration: initial;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.links a:hover {
+  color: #2ecc71;
+}
+
+#wrapper img {
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 3px solid #2ecc71;
+}
+
+#wrapper h1 {
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+}
+
+#wrapper p {
+  margin-bottom: 20px;
+  line-height: 10px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+#wrapper ul {
+  margin-bottom: 20px;
+}
+
+#wrapper li {
+  font-size: 14px;
+  color: #a9d8e4;
+}
+
+/* ========= Estilização da section cards ========  */
+.text {
+  margin: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.cards {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: dimgrey;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  margin: 20px 45%;
+  border: 1px solid #7ed6df;
+  border-radius: 50%;
+}
+
+.card_number {
+  padding-top: 5px;
+}
+
+.card_number strong {
+  color: #7ed6df;
+}
+
+.conteudo,
+.button {
+  padding: 24px;
+}
+
+.card_button {
+  margin: 10px;
+  height: 30px;
+}
+
+.button_text {
+  padding: 15px;
+}
+
+/* ========= modal overlay ========== */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .close-modal {
+  color: black;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.modal .modal-content {
+  position: absolute;
+  top: 50px;
+}
+
+/* =============== modal active ================= */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
