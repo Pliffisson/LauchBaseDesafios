@@ -1,9 +1,26 @@
 const express = require("express");
+const nunjucks = require("nunjucks");
+
+//Chamando o servidor express
 const app = express();
+
+//Entregando arquivos estaticos no express
+app.use(express.static("public"));
+app.set("view engine", "njk");
+
+//Configuração da template engine
+nunjucks.configure("views", {
+  autoescape: true,
+  express: app,
+});
 
 /// Configuração da rotas
 app.get("/", function (req, res) {
-  return res.send("Seja bem vindo ao express!");
+  return res.render("about");
+});
+
+app.get("/courses", function (req, res) {
+  return res.render("courses");
 });
 
 /// Porta do sevidor express
