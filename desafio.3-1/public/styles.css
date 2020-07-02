@@ -147,3 +147,12 @@ header {
   opacity: 1;
   visibility: visible;
 }
+
+/* ============ Estilização do error 404 ============ */
+.container {
+  margin-top: 30%;
+}
+
+.container .error {
+  font-size: 50pt;
+}

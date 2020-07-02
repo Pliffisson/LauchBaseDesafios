@@ -16,11 +16,15 @@ nunjucks.configure("views", {
 
 /// Configuração da rotas
 app.get("/", function (req, res) {
+  return res.render("courses");
+});
+
+app.get("/about", function (req, res) {
   return res.render("about");
 });
 
-app.get("/courses", function (req, res) {
-  return res.render("courses");
+app.use(function (req, res) {
+  res.status(404).render("not-found");
 });
 
 /// Porta do sevidor express
