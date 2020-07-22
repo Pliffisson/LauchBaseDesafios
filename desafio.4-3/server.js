@@ -5,6 +5,7 @@ const routes = require("./routes");
 const server = express();
 
 // ============ Usando Middlewares ===============
+server.use(express.urlencoded({ extended: true })); // Responsavel por funcionar o req.body
 server.use(express.static("public")); // Carregando a estilização da pagina
 server.use(routes);
 
