@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        {% block head %}
+
+            <title>Escola</title>
+
+        {% endblock %}
+
+        <link rel="stylesheet" href="/index.css">
+        <link rel="shortcut icon" href="/graduado.svg" type="image/x-icon">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="links">
+                <a href="/" class="active">Professores</a>
+                <a href="/students">Estudantes</a>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+
+    </body>
+
+</html>
