@@ -1,0 +1,13 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://api.google.com.br",
+      "name": "PliffissonGomes",
+      "birth": 447984000000,
+      "grau": "superior",
+      "area": "Matematica",
+      "created_at": 1598562042063
+    }
+  ]
+}
