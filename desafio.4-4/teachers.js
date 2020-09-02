@@ -8,9 +8,21 @@ exports.show = function (req, res) {
     return teacher.id == id;
   });
 
-  if (!foundTeachers) return res.send("Professor(a) não encontrado no sistema");
+  if (!foundTeachers) {
+    return res.send("Professor(a) não encontrado no sistema");
+  }
 
-  return res.send(foundTeachers);
+  //Organizar os dados
+  const teacher = {
+    ...foundTeachers,
+    age: "",
+    graduation: "",
+    rooms: "",
+    services: "",
+    created_at: "",
+  };
+
+  return res.render("teachers/show", { teacher });
 };
 
 exports.post = function (req, res) {
