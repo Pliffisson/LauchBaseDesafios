@@ -1,6 +1,18 @@
 const fs = require("fs");
 const data = require("./data.json");
 
+exports.show = function (req, res) {
+  const { id } = req.params;
+
+  const foundTeachers = data.teachers.find(function (teacher) {
+    return teacher.id == id;
+  });
+
+  if (!foundTeachers) return res.send("Professor(a) não encontrado no sistema");
+
+  return res.send(foundTeachers);
+};
+
 exports.post = function (req, res) {
   //Validação de todos os campos do formulário
   const keys = Object.keys(req.body);
