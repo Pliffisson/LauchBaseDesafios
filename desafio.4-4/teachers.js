@@ -1,5 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
+const { age, graduation } = require("./utils");
 
 exports.show = function (req, res) {
   const { id } = req.params;
@@ -15,11 +16,12 @@ exports.show = function (req, res) {
   //Organizar os dados
   const teacher = {
     ...foundTeachers,
-    age: "",
-    graduation: "",
-    rooms: "",
-    services: "",
-    created_at: "",
+    age: age(foundTeachers.birth),
+    graduation: graduation(foundTeachers.area),
+    area: foundTeachers.area.split(","),
+    created_at: new Intl.DateTimeFormat("pt-BR").format(
+      foundTeachers.created_at
+    ),
   };
 
   return res.render("teachers/show", { teacher });

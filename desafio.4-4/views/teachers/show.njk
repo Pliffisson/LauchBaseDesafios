@@ -23,16 +23,14 @@
       <div class="item">
         <div>Tipo de aula</div>
         <div>
-          {% for room in teacher.rooms %}
-          <span>{{room}}</span>
-          {% endfor %}
+          <span>{{"À distancia" if teacher.distancia == "on" else "Presencial"}}</span>
         </div>
       </div>
       <div class="item">
         <div>Acompanhamento</div>
         <div>
-          {% for service in teacher.services %}
-          <span>{{service}}</span>
+          {% for areas in teacher.area %}
+          <span>{{areas}}</span>
           {% endfor %}
         </div>
       </div>
