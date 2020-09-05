@@ -12,6 +12,4 @@ module.exports = {
 
     return age;
   },
-
-  graduation: function () {},
 };
