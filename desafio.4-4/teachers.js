@@ -1,6 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
-const { age } = require("./utils");
+const { age, date } = require("./utils");
 
 exports.show = function (req, res) {
   const { id } = req.params;
@@ -25,10 +25,6 @@ exports.show = function (req, res) {
   };
 
   return res.render("teachers/show", { teacher });
-};
-
-exports.edit = function (req, res) {
-  return res.render("teachers/edit");
 };
 
 exports.post = function (req, res) {
@@ -64,4 +60,24 @@ exports.post = function (req, res) {
 
     return res.redirect("/teachers");
   });
+};
+
+exports.edit = function (req, res) {
+  //Busca o professor
+  const { id } = req.params;
+  const foundTeachers = data.teachers.find(function (teacher) {
+    return teacher.id == id;
+  });
+
+  if (!foundTeachers) {
+    return res.send("Professor(a) não encontrado no sistema");
+  }
+
+  const teacher = {
+    ...foundTeachers,
+    birth: date(foundTeachers.birth),
+  };
+
+  //Renderizar a pagina de editar do professor
+  return res.render("teachers/edit", { teacher });
 };
