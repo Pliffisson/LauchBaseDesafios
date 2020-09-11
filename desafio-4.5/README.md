@@ -3,10 +3,10 @@
 </h1>
 
 <h3 align="center">
-  Desafio 4-4: Apresentação, edição e formatação dos dados de um professor
+  Desafio 4-5: HTTP: PUT e DELETE
 </h3>
 
-<blockquote align="center">“Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível.”</blockquote>
+<blockquote align="center">“A impaciência é um grande obstáculo para o bom êxito.”</blockquote>
 
 <p align="center">
 
@@ -28,26 +28,22 @@
 
 ## :rocket: Sobre o desafio
 
-Nessa etapa você deve criar duas rotas: uma para apresentar os dados do professor (show) e outra para a edição dos dados cadastrados (edit). Além disso, realize a formatação dos dados cadastrados para a correta exibição no HTML
+Nessa etapa você irá implementar duas rotas: PUT e DELETE para a atualização e remoção, respectivamente, dos dados cadastrados de um professor.
 
-### Show
+### PUT
 
-Crie uma rota para lidar com a apresentação dos dados cadastrados de um professor. Dentro do arquivo `teachers.js`, crie um método `show` para buscar e retornar o professor a partir do `id` fornecido na rota. Os seguintes dados precisam ser formatados:
+Crie uma rota para receber os dados do formulário de edição e propagar no arquivo `json`. Lembre de sobrescrever o método POST do form para PUT (utilize a lib `method-override`). Dentro do arquivo `teachers.js`, crie um método `update` para buscar e retornar o professor a partir do `id` fornecido na rota. Faça a busca pelo professor a partir do `id` e atualize no arquivo `json` os dados que foram alterados (utilize o constructor `Number` para formatar o id como número). Por fim, redirecione para a página de apresentação dos dados de um professor (show).
 
-- Idade: Crie um arquivo `utils.js` que exporta uma função chamada `age`. Essa função deve retornar a idade a partir do parâmetro (data de nascimento) informado;
-- Grau de escolaridade: crie uma função `graduation` no arquivo `utils.js`. Essa função deve retornar o grau de escolaridade formatado a partir do valor do select informado (ex.: **Ensino Médio Completo** para o valor **medio** do `select`);
-- Acompanhamento: Utilize o método `split` da string para gerar um array com as matérias que o professor leciona;
-- Desde: Utilize o constructor `Intl` e seus métodos para gerar uma data no formato `dia/mes/ano`.
+### DELETE
 
-Ao fim da apresentação dos dados, crie um link que irá redirecionar para a rota de edição dos dados cadastrados.
-
-### Edição
-
-Crie uma rota para lidar com a edição dos dados cadastrados de um professor. Dentro do arquivo `teachers.js`, crie um método `edit` para buscar e retornar o professor a partir do `id` fornecido na rota. Utilize a mesma interface da rota de apresentação dos dados do professor (lembrando de fazer o reaproveitamento do form com um arquivo `fields.njk`). Por fim, crie uma função chamada `date` no arquivo `utils.js`. Essa função deve retornar a data no formato `yyyy-mm-dd` para a correta exibição no input do tipo `date` no HTML (lembre de tratar os dias e meses menores que 10 utilizando o método `splice` da string).
+Crie um botão na página de apresentação dos dados do professor. Esse botão irá chamar uma rota para deletar o professor do arquivo `json`. Lembre de sobrescrever o método POST do form para DELETE (utilize a lib `method-override`). Dentro do arquivo `teachers.js`, crie um método `delete` e gere um array com todos os professores, exceto o que deve ser removido (`filter`). Por fim, redirecione para a página de listagem dos professores.
 
 ### Estilização
 
-Você tem liberdade para escolher a estilização que preferir para esse desafio.
+Você tem liberdade para escolher a estilização que preferir para esse desafio. Porém algumas coisas são obrigatórias:
+
+- O botão de deletar deve ficar ao lado do botão de editar;
+- O botão de deletar deve ser da cor vermelha.
 
 ## :calendar: Entrega
 

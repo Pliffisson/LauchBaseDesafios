@@ -91,9 +91,45 @@ exports.edit = function (req, res) {
 };
 
 exports.put = function (req, res){
-  return res.redirect("/teacher")
+  const { id } = req.body;
+  let index = 0
+
+  const foundTeachers = data.teachers.find(function (teacher, foundIndex) {
+    if (id == teacher.id){
+      index == foundIndex
+      return true
+    }
+  });
+
+  if (!foundTeachers) return res.send("Professor(a) não encontrado no sistema");
+  
+  const teacher = {
+    ...foundTeachers,
+    ...req.body,
+    birth: Date.parse(req.body.birth)
+  }
+
+  data.teachers[index] = teacher
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+    if(err) return res.send("Erro ao gravar o arquivo")
+
+    return res.redirect(`/teachers/${id}`)
+  })
+
 }
 
 exports.delete = function(req, res){
-  return res.redirect("/teachers")
+  const { id } = req.body
+  const filteredTeachers = data.teachers.filter(function(teacher){
+    return teacher.id != id
+  })
+
+  data.teachers = filteredTeachers
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+    if (err) return res.send("Erro na gravação do arquivo")
+
+    return res.redirect("/teachers")
+  })
 }
