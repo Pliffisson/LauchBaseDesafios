@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/332741/500x500",
+      "name": "Levi dos Santos Gomes",
+      "birth": 1545264000000,
+      "grau": "Superior",
+      "distancia": "P",
+      "area": "Fisica",
+      "created_at": 1599853454933
+    }
+  ]
+}
