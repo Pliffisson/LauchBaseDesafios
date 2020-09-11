@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --primary-color: #4e54c8;
+  --secondary-color: #f5cd79;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #4e54c8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  background: white;
+  box-sizing: border-box;
+}
+
+.links {
+  font-size: 20px;
+}
+
+.links a + a {
+  margin-left: 32px;
+}
+
+.links a {
+  text-decoration: none;
+  color: gray;
+  position: relative;
+}
+
+.links a.active {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+.links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+.links a:hover::after {
+  width: 100%;
+  transition: width 700ms ease-in-out;
+}
+
+/* ===== CARD ====== */
+.card {
+  width: 800px;
+  min-height: 400px;
+  background-color: white;
+  margin: 32px auto;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  animation: up 200ms ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.details {
+  padding: 32px;
+}
+
+.details .item {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 16px 0;
+}
+
+.details .item:first-child {
+  border-top: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+  color: #777;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 18px;
+  text-align: center;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* ================== Formularios =================== */
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+select {
+  width: 100%;
+  outline: none;
+  background-color: var(--secondary-color);
+  color: #777;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button[type="submit"],
+a.button {
+  padding: 8px 32px;
+  background-color: var(--primary-color);
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+}
