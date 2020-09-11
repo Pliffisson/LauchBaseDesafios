@@ -1,14 +1,34 @@
 {
   "teachers": [
     {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/332741/500x500",
+      "name": "Pliffisson Maciel Gomes",
+      "birth": 447984000000,
+      "grau": "Superior",
+      "distancia": "P",
+      "area": "Matematica, Robotica",
+      "created_at": 1599857978011
+    },
+    {
       "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/332741/500x500",
+      "name": "Suzana Silva dos Santos Gomes",
+      "birth": 660441600000,
+      "grau": "Superior",
+      "distancia": "À",
+      "area": "Portugues, Artes",
+      "created_at": 1599858017124
+    },
+    {
+      "id": 3,
       "avatar_url": "https://source.unsplash.com/collection/332741/500x500",
       "name": "Levi dos Santos Gomes",
       "birth": 1545264000000,
       "grau": "Superior",
-      "distancia": "P",
-      "area": "Fisica",
-      "created_at": 1599853454933
+      "distancia": "À",
+      "area": "Educação financeira",
+      "created_at": 1599858062800
     }
   ]
 }
